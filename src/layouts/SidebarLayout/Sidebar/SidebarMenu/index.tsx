@@ -15,6 +15,8 @@ import { SidebarContext } from 'src/contexts/SidebarContext';
 import DesignServicesTwoToneIcon from '@mui/icons-material/DesignServicesTwoTone';
 import BrightnessLowTwoToneIcon from '@mui/icons-material/BrightnessLowTwoTone';
 import MmsTwoToneIcon from '@mui/icons-material/MmsTwoTone';
+import ChatTwoToneIcon from '@mui/icons-material/ChatTwoTone';
+import LoginTwoToneIcon from '@mui/icons-material/LoginTwoTone';
 import TableChartTwoToneIcon from '@mui/icons-material/TableChartTwoTone';
 import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
 import BallotTwoToneIcon from '@mui/icons-material/BallotTwoTone';
@@ -227,6 +229,28 @@ function SidebarMenu() {
                   startIcon={<MmsTwoToneIcon />}
                 >
                   Messenger
+                </Button>
+              </ListItem>
+              <ListItem component="div">
+                <Button
+                  disableRipple
+                  component={RouterLink}
+                  onClick={closeSidebar}
+                  to="/dashboards/chat"
+                  startIcon={<ChatTwoToneIcon />}
+                >
+                  Chat
+                </Button>
+              </ListItem>
+              <ListItem component="div">
+                <Button
+                  disableRipple
+                  component={RouterLink}
+                  onClick={closeSidebar}
+                  to="/login"
+                  startIcon={<LoginTwoToneIcon />}
+                >
+                  Login
                 </Button>
               </ListItem>
             </List>

@@ -23,7 +23,12 @@ const Overview = Loader(lazy(() => import('src/content/overview')));
 const Crypto = Loader(lazy(() => import('src/content/dashboards/Crypto')));
 
 // Applications
-
+const Chat = Loader(
+  lazy(() => import('src/content/applications/Chat'))
+);
+const Login = Loader(
+  lazy(() => import('src/content/applications/Login'))
+);
 const Messenger = Loader(
   lazy(() => import('src/content/applications/Messenger'))
 );
@@ -90,6 +95,10 @@ const routes: RouteObject[] = [
         element: <Navigate to="/" replace />
       },
       {
+        path: 'login',
+        element: <Login />
+      },
+      {
         path: 'status',
         children: [
           {
@@ -135,6 +144,10 @@ const routes: RouteObject[] = [
       {
         path: 'messenger',
         element: <Messenger />
+      },
+      {
+        path: 'chat',
+        element: <Chat />
       }
     ]
   },
